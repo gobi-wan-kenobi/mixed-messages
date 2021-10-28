@@ -1,0 +1,150 @@
+// topic: randomly generated movie, randomly generated food
+
+// top 100 movies from IMDB from 2010-2019
+const movies_list = [
+    "Prisoners (2013)",
+    "The Grand Budapest Hotel (2014)",
+    "Interstellar (2014)",
+    "The Wolf of Wall Street (2013)",
+    "Mad Max: Fury Road (2015)",
+    "Kimi no na wa. (2016)",
+    "Manchester by the Sea (2016)",
+    "Inception (2010)",
+    "Toy Story 3 (2010)",
+    "Paterson (2016)",
+    "Boyhood (2014)",
+    "Inside Out (2015)",
+    "Dunkirk (2017)",
+    "Black Swan (2010)",
+    "Gone Girl (2014)",
+    "Blade Runner 2049 (2017)",
+    "The Imitation Game (2014)",
+    "12 Years a Slave (2013)",
+    "The King's Speech (2010)",
+    "Spotlight (2015)",
+    "Django Unchained (2012)",
+    "The Tree of Life (2011)",
+    "Whiplash (2014)",
+    "La La Land (2016)",
+    "Logan (2017)",
+    "The Social Network (2010)",
+    "Arrival (2016)",
+    "Before Midnight (2013)",
+    "Nebraska (2013)",
+    "Phantom Thread (2017)",
+    "Argo (2012)",
+    "Hacksaw Ridge (2016)",
+    "The Revenant (2015)",
+    "Moonrise Kingdom (2012)",
+    "Captain Fantastic (2016)",
+    "Nightcrawler (2014)",
+    "Her (2013)",
+    "Hidden Figures (2016)",
+    "Edge of Tomorrow (2014)",
+    "The Perks of Being a Wallflower (2012)",
+    "Bridge of Spies (2015)",
+    "Call Me by Your Name (2017)",
+    "The Master (2012)",
+    "The Big Short (2015)",
+    "The Avengers (2012)",
+    "The Disaster Artist (2017)",
+    "The Dark Knight Rises (2012)",
+    "The Martian (2015)",
+    "Zero Dark Thirty (2012)",
+    "Life of Pi (2012)",
+    "Dawn of the Planet of the Apes (2014)",
+    "The Theory of Everything (2014)",
+    "Captain Phillips (2013)",
+    "Moonlight (2016)",
+    "Lady Bird (2017)",
+    "Midnight in Paris (2011)",
+    "Gravity (2013)",
+    "Guardians of the Galaxy (2014)",
+    "Ex Machina (2014)",
+    "Hell or High Water (2016)",
+    "Silver Linings Playbook (2012)",
+    "Baby Driver (2017)",
+    "Drive (2011)",
+    "Lion (2016)",
+    "Coco (2017)",
+    "Steve Jobs (2015)",
+    "Skyfall (2012)",
+    "Sicario (2015)",
+    "A Monster Calls (2016)",
+    "Harry Potter and the Deathly Hallows: Part 2 (2011)",
+    "The Girl with the Dragon Tattoo (2011)",
+    "Moneyball (2011)",
+    "Silence (2016)",
+    "Carol (2015)",
+    "The Shape of Water (2017)",
+    "The Hateful Eight (2015)",
+    "Room (2015)",
+    "Birdman or (The Unexpected Virtue of Ignorance) (2014)",
+    "X-Men: Days of Future Past (2014)",
+    "Dallas Buyers Club (2013)",
+    "The Florida Project (2017)",
+    "The Artist (2011)",
+    "Les MisÈrables (2012)",
+    "How to Train Your Dragon (2010)",
+    "The Help (2011)",
+    "Get Out (2017)",
+    "Captain America: Civil War (2016)",
+    "Serbuan maut 2: Berandal (2014)",
+    "Wind River (2017)",
+    "Fury (2014)",
+    "Lincoln (2012)",
+    "The World's End (2013)",
+    "Mission: Impossible - Ghost Protocol (2011)",
+    "Tinker Tailor Soldier Spy (2011)",
+    "Three Billboards Outside Ebbing, Missouri (2017)",
+    "Looper (2012)",
+    "Star Wars: Episode VII - The Force Awakens (2015)",
+    "Hunt for the Wilderpeople (2016)",
+    "The Conjuring (2013)",
+    "American Hustle (2013)"
+];
+
+const snack_list = [
+    "Chips",
+    "Hot Dogs",
+    "Ice Cream",
+    "Raisinets",
+    "Malteesers",
+    "Nachos",
+    "Macaroons",
+    "Pizza",
+    "Gummy Bears",
+    "Fuzzy Peaches",
+    "Sour Patch Kids",
+    "Bueno",
+    "Sour Worms",
+    "Skittles",
+    "Soft Pretzels",
+    "Reese's Pieces",
+    "Fruit Platter",
+    "M&Ms",
+    "Cookie Dough Bites",
+    "Cheesecake",
+    "Popcorn",
+    "Wine"
+],
+
+// create function that will take a list of top 100 movies and randomly pick one.
+pickMovie = (movies_list) => {
+    let selectedMovie = Math.floor(Math.random() * movies_list.length);
+    return movies_list[selectedMovie];
+};
+
+// create function that will take a list of popular snacks and randomly pick one.
+pickSnack = (snack_list) => {
+    let selectedSnack = Math.floor(Math.random() * snack_list.length);
+    return snack_list[selectedSnack];
+};
+
+main = () => {
+    let selectedMovie = pickMovie(movies_list);
+    let selectedSnack = pickSnack(snack_list);
+    console.log(`Grab your ${selectedSnack}, and get ready to turn out the lights. Tonight you're watching - ${selectedMovie}! Enjoy!`);
+};
+
+main();
